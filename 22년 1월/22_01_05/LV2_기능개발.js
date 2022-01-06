@@ -23,7 +23,7 @@ const solution = (progresses, speeds) => {
 
       answer.push(successCount);
     }
-  }
+  
 
   return answer;
 };
