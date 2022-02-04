@@ -4,11 +4,11 @@ const getPermutation = (cnt, output, permu_arr, visited) => {
     return;
   }
 
-  for (let i = 1; i <= N; i++) {
+  for (let i = 0; i < N; i++) {
     if (visited[i] === 1) continue;
 
     visited[i] = 1;
-    output.push(i);
+    output.push(nums[i]);
     getPermutation(cnt + 1, output, permu_arr, visited);
     output.pop();
     visited[i] = 0;
