@@ -29,7 +29,21 @@ const solution = () => {
     }
   };
 
-  bfs(1);
+  const dfs = start => {
+    visited[start] = 1;
+
+    for (let i = 0; i < graph[start].length; i++) {
+      const next = graph[start][i];
+
+      if (!visited[next]) {
+        answer[next] = start;
+        // 재귀로 탐색
+        dfs(next);
+      }
+    }
+  };
+
+  dfs(1);
 
   console.log(answer);
 };
